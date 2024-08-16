@@ -22,7 +22,7 @@ int getfront(){
 int getRear(){
     if(isEmpty()) return -1;
     else{
-       return ((front+size-1)%cap);
+       return ((front+size-1)%cap);  //we could simply do rear= front+size-1 but we did %cap because we are implementin a circular queue, and when rear comes at size-1 index i needs to go to the first index again
     }
 }
 void enqueue(int x){
