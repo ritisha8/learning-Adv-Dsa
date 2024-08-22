@@ -15,11 +15,11 @@ void insert(int temp, stack<int>&st){
   // after inserting at its correct position we have to insert the popped ellemnt at its correct pos
   st.push(val);
 }
-stack<int> sort(stack<int> &st){
+void sort(stack<int> &st){
 // we have to return a sorted stack heree
 // base conmdition
 // what would be the least possible valid input of the sort fucntion in stack , 1 elemt right? 0 ellemnts would mean no sorting so that would be invalid input
-if(st.size()==1) return st;  // id stack has onlyone elemnt it is allready sorted so we illl simply return the stack 
+if(st.size()==1) return ;  // id stack has onlyone elemnt it is allready sorted so we illl simply return the stack 
 
 // lest design hjypothesis if stack has 4 ellemts currecntly and we remove the last ellemt and store it in a vruiable and then call the sort function agagin now theb asort function will work properly 
 // and it will return thje sorted stack and now we ill just need to insert the last llement that we popped  at its correct position
@@ -27,7 +27,7 @@ int temp=st.top();
 st.pop();
 sort(st);
 insert(temp,st);  // induction step
-return st;
+
 }
 int main(){
     stack<int>st;
