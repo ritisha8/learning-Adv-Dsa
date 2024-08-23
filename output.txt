@@ -1,4 +1,7 @@
-50
-40
-20
-10
+move disc 1 from rod 1 to rod 3
+move disc 2 from rod 1 to rod 2
+move disc 1 from rod 3 to rod 2
+move disc 3 from rod 1 to rod 3
+move disc 1 from rod 2 to rod 1
+move disc 2 from rod 2 to rod 3
+move disc 1 from rod 1 to rod 3
