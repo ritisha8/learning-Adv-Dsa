@@ -1,10 +1,11 @@
+//subset,power set and subsequence has little to no variations in them 
 #include<bits/stdc++.h>
 using namespace std;
 //this is input /output approachto a recursive problem
 // before approaching to this prob we make a recurive tree which makes it quite easy
 void subset(string ip,string op){  
     if(ip.length()==0){   // in recursive tree when input becomes empty , we get all the subets possible so we initial;izeed input as empty in base case
-        cout<<op<<" ";  // when we reach inpuit empty we print op there , which is each subset
+        cout<<"["<<op<<"]"<<" ";  // when we reach inpuit empty we print op there , which is each subset
         return;  // then we return;
     }
     string op1=op;  // then we take a string and initialize the string with with the outp because if inut is not empty

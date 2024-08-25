@@ -21,7 +21,7 @@ int main(){
     set<string>s;  //here we just created a set and passed all the op strings in it
     solve(ip,op,s);
     for(auto it=s.begin();it!=s.end();it++){
-        cout<<*it<<" ";
+        cout<<"["<<*it<<"]"<<" ";
     }
     return 0;
     
