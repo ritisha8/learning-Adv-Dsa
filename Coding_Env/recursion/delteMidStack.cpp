@@ -2,7 +2,7 @@
 using namespace std;
 void solve(stack<int>&st, int k){
     if(k==1) {   // k ==0means we have no middle an sowe cant delte it so that would be invalid input
-        st.pop(); //whenk is1means we have only 2 ellemnts in stack so mid==1 mean top element in stack
+        st.pop(); //when k is 1 means we have only 2 ellemnts in stack so mid==1 mean top element in stack
         return;
     }
    //hypothetucally it will delte the mid ellemtn so when we dont know what todo we makeinput smaller, here inputwe have taken a stac and a mid ellemnt
