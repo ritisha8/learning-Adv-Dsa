@@ -1,5 +1,5 @@
-we have learnt that in recursion we get 2 choices of if wewant to include it or not ,we get those choices multiple times in recursion sometimes , so inorder  to avoid computing the recursive callof those same vakues that we have allready computed , we use dp;
-in dp we take an extrastorage variable that is a matrix that stores the variables that are changing and then , we would first come up with a recursive solution , then we would make a storage variable and whenever we are getting a recursive call we will store 
+we have learnt that in recursion we get 2 choices of if wewant to include it or not ,we get those choices multiple times in recursion sometimes , so inorder  to avoid computing the recursive callof those same values that we have allready computed , we use dp;
+in dp we take an extra storage variable that is a matrix that stores the variables that are changing and then , we would first come up with a recursive solution , then we would make a storage variable and whenever we are getting a recursive call we will store 
 the returned value of that function in that matrix and then thst value for those metrics get stored in that area in matrix and whenever agagin that recursive call occurs we can return value that to it instead of computing the whole recursiev call solution again
 , for doing this we need to check first in recurisve soln if the matrix has that variable in it ,then we will directly return that varibale from the matrix , if not we will go to further recursibve calls which will again store values in matrix 
 
