@@ -12,7 +12,7 @@ int removeElement(vector<int>&v,int val){
 
 }
 int main(){
- 
+  
   int n;
   cin>>n;
    vector<int>v(n);
