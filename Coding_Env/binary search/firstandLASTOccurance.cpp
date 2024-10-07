@@ -33,7 +33,7 @@ int binaryLastOccur(vector <int> arr,int ele){
            end=mid-1;
         }
         else{
-            res=mid;  // now store the mid in res if found equal to 10 , but we will also check in lest side if this is the last occurance 
+            res=mid;  // now store the mid in res if found equal to 10 , but we will also check in left side if this is the last occurance 
             start=mid+1;  // thats why we did this
         }
     }
