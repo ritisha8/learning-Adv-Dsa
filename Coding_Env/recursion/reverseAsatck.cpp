@@ -6,7 +6,7 @@ void insert(int temp, stack<int>&st){
         return ;
     }
     int val=st.top();
-    st.top();
+    st.pop();
     insert(temp,st);
     st.push(val);
 }

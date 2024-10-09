@@ -21,7 +21,7 @@ void toh(int n,int s,int d,int h){
     return;
 }
 int main(){
-    int N;  // will input no. od discs
+    int N;  // will input no. of discs
     cin>>N;
     int s=1;   // source rod
     int h=2;   //helper rod
