@@ -40,6 +40,4 @@ int main(){
     
     cout<<subsetSum(v,sum,n);
     return 0;
-
-
 }
