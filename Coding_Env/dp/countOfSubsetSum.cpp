@@ -3,7 +3,8 @@ using namespace std;
 int t[102][1002];
 int solve(vector<int>v,int n,int k){
     if(n==0){
-        t[n][k]= 0;  // we are not directly returning it because then in between rec calls if we get n=0 r k=0 then it will directly come here and return 0 , what we want is the sum of including nad not including the element in a subset, and we willjust get 0 on the basis of one condition directly which i swrong
+        t[n][k]= 0;  // we are not directly returning it because then in between rec calls if we get n=0  k=0 then it will directly come here and return 0 
+        //, what we want is the sum of including including and not including the element in a subset, and we will just get 0 on the basis of one condition directly which is wrong
     }
     if(k==0){
         t[n][k]= 1; 

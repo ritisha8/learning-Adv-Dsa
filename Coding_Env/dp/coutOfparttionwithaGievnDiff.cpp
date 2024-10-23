@@ -9,10 +9,11 @@ int count(vector<int>&v,int n, int sum){
     int t[n+1][sum+1];
     memset(t,0,sizeof(t));
     // here we dont deal with base cases similarly because as we did when sum is 0, we did return 1 for all array sizes but , we didnt take into cosnideration if array ellemnt turns out to be zero , then there will be two susbets , {} {0} , one mepty and one with 0 in it so here we  dont just thoughlessly give 1 in base condton we check for j=0 same as we check for ellements from j=1 to sum+1;
-    // but we make the first elemnt of t[0][0] as 1, becaase  it will remain 1 only it will only have an empty subset
+    // but we make the first elemnt of t[0][0] as 1, becauase  it will remain 1 only it will only have an empty subset only beacuse when vector size is zero and partition size is zero,
     t[0][0]=1;
+    //we are not calcukating for the first row when vector size=0 , and sum=0 ,then absolutely the when vector size would eb zero and sumwould be anything we cant calulte soteh ans will be 0, and zero we allerady placed in the whole matrix as default in memset.
     for(int i=1;i<n+1;i++){
-        for(int j=0;j<sum+1;j++){
+        for(int j=0;j<sum+1;j++){  // because we dont know here if sum =0 ,will have how many values it can alsohave zeroes in it as elemnt right, so weadd it here to compute it like rest of the other
             if(v[i-1]<=j){
                 t[i][j]=t[i-1][j-v[i-1]] + t[i-1][j];
             }else{

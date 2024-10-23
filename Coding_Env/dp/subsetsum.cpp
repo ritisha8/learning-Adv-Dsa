@@ -6,14 +6,15 @@ int t[100][100];
 bool subsetSum(vector<int>v,int sum,int n){
     // first write a recrusive function 
     // here we decide for the last elemnt of v whether totake it or not , in order to get the sum
-    // same like last time if ellemnet is greater than sum we dont consider it and if it is smaller, we have two decison of taking and not taking which wil be represnted through decsion tree
+    // same like last time if ellemnet is greater than sum we dont take it and if it is smaller, we have two decison of taking and not taking which wil be represnted through decsion tree
     
     if(n==0){
-        // least valid input  ,if vector size is 0 , then sum may be anything , then only if sum is 0 then subsetsum will be true otherwise when sumhas vaues more than 0 then sum will never be found in vector subsets because vector is mepty right?
-        return false; // if vector size is 0 and sum is zero sill we can take an dempty subset whose sum is 0  // so we rturn true
+        // least valid input  ,if vector size is 0 , then sum may be anything , then only if sum is 0 then subsetsum will be true otherwise when sum has values more than 0 then sum will never be
+        // found in vector subsets because vector is mepty right?
+        return false; // if vector size is 0 and sum is zero still we can take an dempty subset whose sum is 0  // so we rturn true later on 
     }
     if(sum==0){
-        return true; // if sum is 0 then in every case subset can be founf that is empty set, it is subset and also its sumis 0 , so it will always eb true 
+        return true; // if sum is 0 then in every case subset can be founf that is empty set, it is subset and also its sum is 0 , so it will always eb true 
     }
     if(t[n][sum]!=-1){
         return t[n][sum];
