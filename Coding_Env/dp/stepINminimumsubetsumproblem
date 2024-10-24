@@ -1,0 +1,7 @@
+step 1 : we derieve the equation from  the given equation and  make it into an equation which requires only a single partiton 
+step 2 : then we have no idea how to find the partion values, so we try to see the range of partions , range can be when vector is empty and when vector is full, so range will be from 0 to sum of array , right both partition sum would be from the range of 0 to sum of array. 
+step3: then we check eahc of the sum from the range whther it is possibe for the vector , if yes then we find the put it into the formula and and extract the minimum value of subset partions of a vector
+step 4 :in ordeer to imlement it  then we make a dp matrix of  of subset sum of the sum of whole array, we know that at the last of dp matrix ,
+ at last column we get the values of sums which are possible when array elements are full
+so we make dp matrix in order to get those values of sum 
+step 5: then we put the sum valeus in the formaula we deried and find the minimum of those values we get.
