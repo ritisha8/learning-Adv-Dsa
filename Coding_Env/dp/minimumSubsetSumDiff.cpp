@@ -6,6 +6,14 @@
 // why we took the subet sumof whole array sum beacuse when array elemnet , beacuse we wanted to know which sum's partion are possible from the whole range , an dthen we wanted to put the values of sums we found out in place of s1 inthe
 // formula,we calculated , which is the sumof one partion, when we minusthe sumof array with 2 oduble of suj of 1 partion we get , thta is the value we need to minimize , as as we donot have another partion here so we have to make use of whtever valeus we have and derieve an equation 
 // from there we can either store the j values or sum valeus in vector nand then further minimize the equation we got inthe beginning min=sum-2s1, sum - jo bi s1 or j ki values hmne find out kri with the last column of dp matrix
+
+//step 1 : we derieve the equation from  the given equation and  make it into an equation which requires only a single partiton 
+//step 2 : then we have no idea how to find the partion values, so we try to see the range of partions , range can be when vector is empty and when vector is full, so range will be from 0 to sum of array , right both partition sum would be from the range of 0 to sum of array. 
+//step 3 : then we check eahc of the sum from the range whther it is possibe for the vector , if yes then we find the put it into the formula and and extract the minimum value of subset partions of a vector
+//step 4 :in ordeer to imlement it  then we make a dp matrix of  of subset sum of the sum of whole array, we know that at the last of dp matrix ,
+//at last column we get the values of sums which are possible when array elements are full
+//so we make dp matrix in order to get those values of sum 
+//step 5 : then we put the sum valeus in the formaula we deried and find the minimum of those values we get.
 #include<bits/stdc++.h>
 using namespace std;
 int solve1(vector<int> &arr,int n,int sum){
