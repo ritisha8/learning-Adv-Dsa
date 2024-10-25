@@ -19,16 +19,17 @@ void solve(string &s,int k,string &res,int start){
     char max=*max_element(s.begin()+start+1,s.end());  // we find out the maximum ellemnt in order to check further if the max elemnt is getting swapped or not
     for(int i=start+1;i<s.length();i++){ // we run a loop fromstart +1 because we dont want the string to havea choice of choose its own, because thta wouldnt be much helpful 
     //we will end up wasting our K's
-        if(s[start]<s[i] && s[i]==max){  // then we chekc
-            swap(s[start],s[i]);
-            if(s.compare(res)>0){
-                res=s;
+        if(s[start]<s[i] && s[i]==max){  // then we will prune the choices which are notthe max elemnt and if theya are max elemnt but less than s[start] then prune it
+            swap(s[start],s[i]);  // then we swap swap(s[start],s[i])
+            if(s.compare(res)>0){  // now we chekc if teh string we have now is greater than the string we had before
+            // if yes we storeit in res
+                res=s;  // this checking we do order to ensure thta we get the largest elemnt
             }
-              solve(s,k-1,res,start+1);  // case 1
-              swap(s[start],s[i]);
+              solve(s,k-1,res,start+1);  // case 1 wherewe we donot allready have largest string
+              swap(s[start],s[i]);  //then we backtrack
         }
     }
-    solve(s,k,res,start+1); // case 2
+    solve(s,k,res,start+1); // case 2  when we are already given the largest number
 }
 string largest(string s,int k){
     string res=s;
