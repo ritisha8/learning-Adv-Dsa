@@ -1,4 +1,4 @@
-//basic format of mcm and identification , so whenever we see a question in which by assigning and to leftmost index and j to rightmost index ,when we break the array or stringwith a k in between , andte solution is somwhow visualizable ,hen it is matrix chain multiplication question
+//basic format of mcm and identification , so whenever we see a question in which by assigning and i to leftmost index and j to rightmost index , when we break the array or string with a k in between , and te solution is somwhow visualizable ,then it is matrix chain multiplication question
 // its format is 
 //step 1 : finding the correct i,j 
 //step 2 : defining base condition
@@ -23,8 +23,9 @@ int solve(vector<int> arr, int i , int j){
    for(int k=i;k<=j-1;k++) {// k=i;k<=j;k++  this is the basic format of writing k loop scheme we have to make changes to it according to our qeustion , so here lest check k for evry i and j when k=i , one partiton will be
    // arr[0]*arr[1] and another k+1 to j, in this way different combinations will be formed in order to find the minimum no. of multiplications, with each iteration k will  divde into two matrices i to k, and k+1 to j,  
  // but here the in the format there will be slight change thta would be lets check when k =j then i to k will be whole array i to j and there willnot be any k+1 to j marix to divide,so we need to run our loop till j-1
- // so that when kis j-1 , one combination will be ito j-1 an d another would be k + 1 to j;
-   int temp=solve(arr,i,k)+solve(arr,k+1,j)+ arr[i-1] *arr[k]* arr[j]; // this ishowwe find outthe total cost by calculting the cost of ito k , adn then k+1 to j and then the cost of muliplying both of these matrices together;
+ // so that when k is j-1 , one combination will be upto j-1 and another would be k + 1 to j;
+   int temp=solve(arr,i,k)+solve(arr,k+1,j)+ arr[i-1] *arr[k]* arr[j]; //this is because when a mtrix arr[i-1]*arr[i] will be done,and then arr[i]* arr[k] will be two of the subproblem then 
+    // this ishowwe find outthe total cost by calculting the cost of ito k , adn then k+1 to j and then the cost of muliplying both of these matrices together;
    mn=min(mn, temp); //this we do in order t find the min of the total cost and store it in in mn
    } 
    return t[i][j]=mn;  // then we store the min value in t[i][j] and them return the minimum
