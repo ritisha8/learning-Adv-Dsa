@@ -37,7 +37,7 @@ void solve(int x,int y,vector<vector<int>> &arr, int n,string &path, vector<stri
         int newx=x+(*it).dx;   // now we make make changes in our new x and y's based on choice through struct 
         int newy=y+(*it).dy;
         // nowwe will controlwhich choiceisvalid and which is not 
-        if(isValid(x,y,n,arr)){  // here we need a, y , arr for state checking u will see why we need n futher in function
+        if(isValid(newx,newy,n,arr)){  // here we need a, y , arr for state checking u will see why we need n futher in function
            arr[x][y]=0;  // change x ,y block to 0sthat we dont come here in this block rpeatedly
            path.push_back((*it).Dname);
            solve(newx, newy,arr,n,path,res, choices);  // recursive call to further check for in which direction itcan go , with new x and y values
