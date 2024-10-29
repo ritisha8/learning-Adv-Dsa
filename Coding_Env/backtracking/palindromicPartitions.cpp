@@ -11,20 +11,21 @@
 //lets see the solution
 /*
                                []
-                               |
-                     +---------+---------+
-                     |                   |
-                    [a]                [aba]
-                     |                    |
-           +---------+---------+        (Partition found: ["aba"])
-           |                   |
-         [a, b]             [a, ba] (Not a palindrome)
-           |                   
-     +-----+-----+
-     |           |
- [a, b, a]    [a, ba] (Not a palindrome)
-     |
- (Partition found: ["a", "b", "a"])
+                                |
+                  +------------+----------------+
+                  |                             |
+                 ["a"]                         ["aba"]
+                  |                              |
+         +--------+--------+              (Partition found: ["aba"])
+         |                 |
+      ["a", "b"]       ["a", "ba"] (Pruned, "ba" is not a palindrome)
+         |
+   +-----+-----+
+   |           |
+["a", "b", "a"] ["a", "b", "ab"] (Pruned, "ab" is not a palindrome)
+   |
+(Partition found: ["a", "b", "a"])
+
 
 */
             
