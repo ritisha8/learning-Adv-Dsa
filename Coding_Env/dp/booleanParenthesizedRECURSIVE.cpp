@@ -1,5 +1,7 @@
 //we need to find the nnumber of way the expersiion will be true
-// in order ot get the number of ways true we do need the number of ways false as well , only then we willl be able to calculate
+// in order ot get the number of ways true we do need the number of ways false as well , only then we willl be able to calculate true ways
+//when from the styart we onky find true ways of a string ,how inn thw end will be find the exact true ways , rue ways are calculated when 
+//we have false ways as well right? otherwise how do you think is possible to calclate true ways
 #include<bits/stdc++.h>
 using namespace std;
 map<string,int>mp;
@@ -21,7 +23,7 @@ int solve(string s, int i, int j,bool isTrue){
     return mp[temp];
    }
     // base condition done
-    for(int k=i+1;k<=j-1;k=k+2){ // beacuse the startign and end chrecter can never be symbols and we want k to break the exp on symbol only
+    for(int k=i+1;k<=j-1;k=k+2){ // beacuse the starting   and end chrecter can never be symbols and we want k to break the exp on symbol only
       int lf=solve(s,i,k-1,false);
       int lt=solve(s,i,k-1,true);
       int rf=solve(s,k+1,j,false);

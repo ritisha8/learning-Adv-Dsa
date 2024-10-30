@@ -1,10 +1,10 @@
-// scrambledd sring is when we divide as tring an dmakeist subtree aand nosubyree can have empty string , these are the two things we have to do with scrambled string 
-//1. make binaty tree 
+// scrambled string is when we divide a string and make its subtree aand no subtree can have empty string , these are the two things we have to do with scrambled string 
+//1. make binary tree 
 // 2. no subtree can have empty string , so we can divide it from 1 , not from 0 because then one string will be full and another empty , we can divide it from 1 and further 
 // till size-1; because at last also if we divide one subtree will have whole string and another empty which is not allowed
 
 // here a string is a scrambled string when its nonleaf nodes's child nodes are swaped and then the string thta comes out after swappping and combining with the above subtree, will be a scrambled tree
-// if a string's nonleaf nodes's child nodes are swapped zeroor more times , then it isa scrambled string so , when a string is not even swapped at all, then also it is a scrambled string , if the string
+// if a string's nonleaf nodes's child nodes are swapped zero or more times , then it is a scrambled string so , when a string is not even swapped at all, then also it is a scrambled string , if the string
 // a is a scrambled string of string b then true is returned otherwise false
 // so we have 2 cases here, if the leaf is swaped and if the leaf is not swapped
 
