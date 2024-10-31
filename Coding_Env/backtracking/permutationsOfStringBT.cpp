@@ -16,6 +16,7 @@ void solve(string &s,int start,vector<string>&v){
     //bc
     if(start==s.size()-1){  // when start pointer starts pointer to the last node, then we get  our ans instring according to backtraking tree
         v.push_back(s);  // before we have input putut here we have the string only becase we are making the hcanges in place 
+        return;
     }
     unordered_set<char>st;  // tp control recrusion
     for(int i=start;i<s.length();i++){  // we aremoving froms atrt to end end ofateing  because we can make chnages from satrt to end ony , any string befre start has been fixed and desion for thta has been taken

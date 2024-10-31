@@ -53,12 +53,16 @@ void solve(string s,vector<string>&temp,int index){
     string pal_string="";
     for(int i=index;i<s.length();i++){  // choices loop
         pal_string=pal_string+s[i];
-        if(isPal(pal_string)){
+        if(isPal(pal_string)){   // because if yestarting vala pat hi palindrome nhi h, toh agr aage vala hga bi toh vo correct combination nhi bnega , hme ese combinations return krne h , 
+                                //jisme sab string palindrome bn re ho 
             temp.push_back(pal_string);  // we didi for the ith string , we  hcekcd if te string is palindrome , then we pushed it into vector ,now we will check  for the further string left that
             solve(s,temp,i+1);  // we diid index+1 here for solving next part ofthe string after ith
             temp.pop_back();
         }
     }
+    //why we dont do index+1 here inrecursive call and i +1 , because see when you aremaking achoice form the for loop of same index, like the string is aa
+    //sowhen you are at second a or s[1] choice in for loop after bakctarking ofcourse, then index still is 0 only if we pass index +1 it will give out the 
+    //wrong index in next call, and so we pass i+1 which means that , after this i we are using , after thing take call call for further string
 }
 vector<vector<string>> PalPartitions(string s){
     vector<string>temp;

@@ -1,6 +1,6 @@
 //problem statement: here what we need to do is swap the string number to make it the largest number in limited k values,like we are given limited swaps 
 //and we need to make the largest number we can from that
-// then we saw how we make do bakctarking =controlled recursion + pass by reference
+// then we saw how we do backtracking =controlled recursion + pass by reference
 // lets see why is there a need for bakctarcking here, this question can be done with greedy aproach as well
 //assume we hve elements [1,2,3,4] we have k =2 , what is greedy aprroach is : when we want to achieve a long term goal with short term doings
 // so here we can claerly see , that if we swap the maximum and first index , we will be done with 1 swap ,and left with kswaps , then we can 

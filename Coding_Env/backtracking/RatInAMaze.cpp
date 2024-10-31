@@ -56,7 +56,7 @@ vector<string> RatInMaze(vector<vector<int>>arr,int n){
     // because ith the up, down , right , leftwe alo need the x and y ,in order to make changes in row and xolumn metric of the matrix as we move forward towards any drection so thta we keep tarck of the path
     // so that we can check further in for loop at what point  which direction is relevant, because we need x , y and matrix to check for state of a block whether it is blocked or not
     //so we define a struct choice and then we make a vector of choice objects to stoe all the different objects of struct
-    vector<choice>choices={{'U',-1,0},{'D',1,0},{'R',0,1},{'L',-1,0}}; //here we define eahc cpr ordinae and how they weill chnage if the rat moves in eahc of the direction
+    vector<choice>choices={{'U',-1,0},{'D',1,0},{'R',0,1},{'L',0,-1}}; //here we define eahc cpr ordinae and how they weill chnage if the rat moves in eahc of the direction
      if(arr[0][0]==1){
        solve(0,0,arr,n,path,res,choices); // now we decide whteeer things we want in order forit to work
      }

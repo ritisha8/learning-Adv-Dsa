@@ -14,13 +14,13 @@ if(idx==s.size()){
 }
 char ch=s[idx];  // lets say 0 is passed as first index so s[0] , will be stored in ch
 for(int i=0;i<mp[ch].size();i++){  // then we will put this ch in map and  see the mapped tring , and this for loop will run till the mappes string's size
-    temp=temp+mp[ch][i];
+    temp=temp+mp[ch][i];  // here we dont want any control , here we want all the possible combinations thta can be made from the mapping of those digits and charecter 
     solve(idx+1,s,mp,ans,temp);
     temp.pop_back();
 }
 }
 
-vector<string> combinations(string s){
+vector<string> combinations(string s){  //  a string of digits is given 
 vector<string>ans;
 if(s.size()==0) return ans;
 
@@ -36,7 +36,7 @@ mp['7']="pqrs";
 mp['8']="tuv";
 mp['9']="wxyz";
 
-// to store the string at each point this is the string thta will be passed by reference and hence will be vaktraked and rverted and used for further calls , this same string
+// to store the string at each point this is the string thta will be passed by reference and hence will be backtracked or reverted and used for further calls , this same string
 string temp; 
 
 //function to solve this question and fetch us combinations

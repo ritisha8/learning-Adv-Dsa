@@ -23,7 +23,7 @@ void solve(string s,vector<string>&ans,int index,unordered_set<string>st,string 
 }
 vector<string> solve(string s, vector<string>&dict){
     vector<string>ans;
-    unordered_set<string>st(dict.begin(),dict.end());
+    unordered_set<string>st(dict.begin(),dict.end());  // because lookups are efficient in set than vectors
     string temp="";
     solve(s,ans,0,st,temp);
     return ans;

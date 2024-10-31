@@ -8,9 +8,9 @@ void solve(int k , vector<int>&v, vector<int>&res){
         }
         res.push_back(ans);
     }
-    // if k is not 1 and hence it has two places ,then0 cant be at first place because thta woukd makeit a single digit elemnt
+    // if k is not 1 and hence it has two places ,then 0 cant be at first place because thta woukd makeit a single digit elemnt
     for(int i=1;i<=9;i++){
-        if(v.size()==0 || v[i]>v[v.size()-1]){
+        if(v.size()==0 || i>v[v.size()-1]){  //not v[i] ,we need to chck for the choice if it is greater than the last elemnt , i is the choice
             v.push_back(i);
             solve(k-1,v,res);
             v.pop_back();
@@ -34,7 +34,7 @@ int main(){
     cin>>k;
     vector<int>v=Nnumber(k);
     for(auto i=v.begin();i!=v.end();i++){
-        cout<<*i<<" ";
+        cout<<*i<<endl;
     }
     return 0;
 }
