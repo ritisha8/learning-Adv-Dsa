@@ -12,7 +12,7 @@
 using namespace std;
 void solve(string &s,int k,string &res,int start){
     //bc
-    if(k==0 || start==s.length()-1){  // here we donotrweach the leaf node because  we have limitedk values ,so we keep the possibility of when k=0, and when start 
+    if(k==0 || start==s.length()-1){  // here we donotrweach the leaf node because  we have limited k values ,so we keep the possibility of when k=0, and when start 
     //becomes s.length()-1
         return;  //then we simply return we dont store values here , because its not compulsr thta we get values here only we can get values anywhere inbetween 
     }
