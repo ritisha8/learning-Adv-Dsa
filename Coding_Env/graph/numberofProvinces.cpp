@@ -13,6 +13,7 @@
 // counter plus, whenever we encouter a node which has not been visted before,
 // to keep track of unconnected components or we can say different provincs
 
+
 #include<bits/stdc++.h>
 using namespace std;
 void dfs(int node,vector<int> adj[],int vis[]){
@@ -38,6 +39,8 @@ int main(){
     int n,m;
     cin>>n>>m;
     vector<int>adj[n+1];
+    //because we are making an adj list startign from 1 so it will be formed for size n+1, 
+    //if we made an adj list starting from 0 then we needed n as size only
     for(int i=0;i<m;i++){
       int u,v;
       cin>>u>>v;
