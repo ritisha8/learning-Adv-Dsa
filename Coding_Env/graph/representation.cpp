@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     int n,m;  // n for no of vertices and m for no. of edges
     cin>>n>>m;  // we take ip for howmuch no. of edges and vertices the graph is
-    vector<int> adj[n+1];  // this is a vector of array adj , which stores empty vector at each index , and as we have vertices from 1 to n , we take n+1 size
+    vector<int> adj[n+1];  // this is a array of vectors adj list , which stores empty vector at each index , and as we have vertices from 1 to n , we take n+1 size
     for(int i=0;i<m;i++){   // we will loop through each edge to input the vertices that are connected to form and edge
         int u,v;
         cin>>u>>v;

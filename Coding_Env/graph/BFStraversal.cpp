@@ -5,12 +5,12 @@ vector<int> BFStraversal(vector<vector<int>> &adj){
     //we make a queueu to store all the neighbouring nodes
     queue<int>q;
     //then we make a visited array , whichw ill store the nodes whicha are visited or not, id the nodes indexing start from 0 wetake vis array of n , bu tif it starts from 1 we take the visisted array of n+1 size
-    int vis[n]={0};
+    vector<int>vis(n+1,0);
     //now we push the 0th node into the queue, node numbers will always start from either zero or 1, so we will always push the first node into queue
-    vis[0]=1;  // first we mark it as 1 to mark that it is visited 
+    vis[1]=1;  // first we mark it as 1 to mark that it is visited 
     // then we push the node into the queue
     //we cant push the node which has allaredy been visited into teh queue
-    q.push(0);
+    q.push(1);
     //answer vector
     vector<int>ans;
     while(!q.empty()){   // now we run a loop until queue is empty 
@@ -32,17 +32,21 @@ vector<int> BFStraversal(vector<vector<int>> &adj){
       //and then we check if visited if the neighboru ahas allready been visited, if yes , we dont vsit it again and move foward to henext neighbour,adn push it into queue, 
       //queue will never hve elemnts whcha are allready visited once
     }
+    return ans;
 }
 int main(){
     int n,m;
     cin>>n>>m;
-    vector<vector<int>>adj(n,vector<int>(n,0));
+    vector<vector<int>>adj(n+1);
     for(int i=0;i<m;i++){
-      int u,v
+      int u,v;
       cin>>u>>v;
       adj[u].push_back(v);
       adj[v].push_back(u);
     }
-    BFStraversal(adj);
+    vector<int>v=BFStraversal(adj);
+    for(int i=0;i<v.size();i++){
+      cout<<v[i]<<" ";
+    }
     return 0;
 }
