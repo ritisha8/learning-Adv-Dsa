@@ -9,7 +9,7 @@ void bfs(int row, int col, vector<vector<int>>&vis,vector<vector<int>>grid,int n
     //thewe check its neighbours right? but before that we store it into a variable and then pop the queue
 
     while(!q.empty()){  //thenwe run a whileloop until queue is empty
-      int row=q.front().first; // stpred in variable 
+      int row=q.front().first; // stored in variable 
       int col=q.front().second;
       q.pop();  // and hen popped
 
