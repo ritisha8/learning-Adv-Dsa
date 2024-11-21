@@ -4,7 +4,8 @@
 //       nCr(i-1,col-1);       // now this will return the corrrct ans, but lets see the time complexity here,     
 //    }} 
 // TC: O(row)*O(row)*O(i)   which would be nearabout or lets take the worst case O(n^3), so now lets optimize it
-//how can we do that , we know we did the type 2 in O(n) , we genertaed each row in O(n), so when n rows need to be genratd, then TC will be O(n) *O(n) =O(n^2)
+//how can we do that , we know we did the type 2 in O(n) , we genertaed each row in O(n), so when n rows need to 
+//be genratd, then TC will be O(n) *O(n) =O(n^2)
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> generateRow(int row){

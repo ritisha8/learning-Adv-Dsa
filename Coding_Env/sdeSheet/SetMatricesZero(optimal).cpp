@@ -2,8 +2,8 @@
 using namespace std;
 void solve(vector<vector<int>>&v,int n,int m){
     // now we dont take any extra columns and row array instead we take the first row and first col to mark the rows and  columns
-    //first row-> v[..][0]
-    //first col-> v[0][..]
+    //first row-> v[..][0]    // where col will alwys be 0
+    //first col-> v[0][..]    // whee row will always be zero
     // as the first cell will collide ,
     //step 1 : we traverse through whol matrix to check for zeroes , then according to thta we mark the ith row and jth col 
     int col0=1;
@@ -42,7 +42,7 @@ void solve(vector<vector<int>>&v,int n,int m){
     //but when we first check for th col elemtns when will col elents be zero , when row[0][0]=0, which is not zero , so wemark it correcly 
     //when somethign is dependent on another thing , we first mark the thing that is dependent , so thta when we go fot the thing ehich was independnt , it will not create any error
 
-    if(v[0][0]==0){
+    if(v[0][0]==0){   // if this is found zero then definately whole column will be zerobecause in order fora row/ col to be zero one of the elemnts should be zero
         for(int j=0;j<m;j++){  // mark the first col as zero 
             v[0][j]=0;
         }
@@ -50,7 +50,7 @@ void solve(vector<vector<int>>&v,int n,int m){
 
     if(col0==0){  // here we donot check orboth col and row because when col0 is zero , then even if row may nt be marked the marking will end as zero only for that particular row , because we need eiher col or row marked as zero not both
         for(int i=0;i<n;i++){
-            v[i][0]==0;
+            v[i][0]==0;    // here alsoif col0 is found zero then whole row will be zero because, col will always be zero , hence ,either of the col or rows shouldbe zeroin order for a row and col to be zero
         }
     }
 
