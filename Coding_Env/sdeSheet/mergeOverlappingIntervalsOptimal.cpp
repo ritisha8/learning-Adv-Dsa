@@ -1,10 +1,12 @@
+//TC:here th element are traversed only once so the complexity would be O(n) and nlogn for sorting
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<int>> solve(vector<vector<int>>&v){
     vector<vector<int>> ans;
     int n=v.size();
     for(int i=0;i<n;i++){
-        if(ans.empty() || v[i][0]>ans.back()[1]){   // when a new interval is created ? when ans is empty and when the intervals[i][0] is greater than whatever is stored in ans.back()[1]
+        if(ans.empty() || v[i][0]>ans.back()[1]){   // when a new interval is created ?
+        // when ans is empty and when the intervals[i][0] is greater than whatever is stored in ans.back()[1]
             ans.push_back(v[i]);
         }
         else if(v[i][0]<=ans.back()[1]){
