@@ -10,8 +10,8 @@ void swapGreaterToleft(vector<int>&arr1,vector<int>&arr2,int idx1,int idx2){
   }
 }
 void solve(vector<int>&arr1,vector<int>&arr2,int n,int m){
-    int len=n+m;
-    int gap=gap/2 +gap%2;  // so that when n+m is odd it divide by 2 and mod of odd number is 1 so 1is added to it and hence the cieling value is taken
+    int len=(n+m);
+    int gap=(gap/2) +(gap%2);  // so that when n+m is odd it divide by 2 and mod of odd number is 1 so 1is added to it and hence the cieling value is taken
     while(gap>0){
       int left=0;
       int right=left+gap;
@@ -28,9 +28,10 @@ void solve(vector<int>&arr1,vector<int>&arr2,int n,int m){
         else{
          swapGreaterToleft(arr1,arr1,left,right);  // if both are in first array then no need of right -n and left -n because index values allign with the actual values of right and left
         }
+        left++,right++;
       }  // this loop will run until the right goes out of bounds 
       if(gap==1) break; // then as soon as the right goes out of bounds the gap wil be updated to half 
-      gap=gap/2 + gap%2;  //then aggain lft and right are assigned newly according to gap values then inner loopruns until agagin right goes out of bounds,
+      gap=(gap/2) + (gap%2);  //then aggain lft and right are assigned newly according to gap values then inner loopruns until agagin right goes out of bounds,
       // untilthe gap value is 1 all the steps are repeated to put each of the elelmtn at its correct place
     }
 }
