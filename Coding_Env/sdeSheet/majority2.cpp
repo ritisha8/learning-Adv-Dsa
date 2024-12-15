@@ -10,7 +10,7 @@ vector<int> solve(vector<int> &v){
         if(ans.size()==0 || ans[0]!=v[i]){   
             // if ans size is 0 or ans first ellemt is not equal to v[i], 
             //we check the whole array if for teh coutn of v[i], other wise we just sip the iteration if the ans size is neither 0 nor its first eleltn is!=v[i], which menas if foudn equal we skip the oteration
-            // because ans will have only 2 elemnts
+            // because ans will have only 2 elemnts,we dont want the same elelmnt in the ans, so the elmnt for whom we have counted allaredy and allredy taken in ans, we skip the iteration.
           int cnt=0;   // then we are chechking for count here so we make cnt as 0 
           for(int j=0;j<v.size();j++){// then for counting we run a j loop 
             if(v[i]==v[j]) cnt++;  // we tarverse from the start if v[i] == v[j], simply increment the count
