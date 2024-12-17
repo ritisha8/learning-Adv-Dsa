@@ -19,7 +19,7 @@ void generateRow(int row){
     for(int col=1;col<row;col++){
         ans=ans*(row-col);  //6-1= 5
         ans=ans/col;    // 5/1 =5 
-        cout<<ans<< " ";
+        cout<<ans<<" ";
     }
 }
 int main(){
