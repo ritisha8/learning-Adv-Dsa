@@ -17,7 +17,7 @@ void solve(vector<vector<int>>&v,int n ,int m){
                     v[p][j]=-1;   // for col j we mark all the row elemtns except zero to -1
                 }
             }
-            for(int q=0;q<n;q++){
+            for(int q=0;q<m;q++){
                 if(v[i][q]!=0){
                     v[i][q]=-1;  // for row i we mark all the col elemnts except zero to -1
                 }
