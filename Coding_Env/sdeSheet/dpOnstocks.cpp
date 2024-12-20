@@ -1,3 +1,13 @@
+//what we are doing here is first finding the cost by subtracting the minimum 
+//left ellemnt from the current ellemnt,then comparing it with profit if it maxmimum?
+//,thebefore moving to the next elelmnt we are updating the minimum , 
+//likeif the current elelmtn is lesser than the previous min ,thnewe update it to current elmnt, 
+//sothat as we move to the next step we have our minimum ready  , we could have done it likeat 
+//evry iterationwe traversedthe left ellmnt s and found themin and then subratected from the 
+//ith ellemnt, but that would take n^2  complexity right?, we reduced it to n by calculatingmin at 
+//every step before moving to the next iteration , so that next iterations min ellemtn is 
+//ready to be subtarcted from
+
 #include<bits/stdc++.h>
 using namespace std;
 int solve(vector<int>v,int n){  

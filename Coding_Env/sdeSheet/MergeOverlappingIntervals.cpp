@@ -16,7 +16,7 @@ vector<vector<int>> solve(vector<vector<int>>&v){
     int n=v.size();
     vector<vector<int>> ans;
     //now travesing 
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n-1;i++){
         int start=v[i][0];
         int end=v[i][1];
         if(!ans.empty() && end<=ans.back()[1]){

@@ -4,6 +4,7 @@ using namespace std;
 vector<vector<int>> solve(vector<vector<int>>&v){
     vector<vector<int>> ans;
     int n=v.size();
+    sort(v.begin(),v.end());
     for(int i=0;i<n;i++){
         if(ans.empty() || v[i][0]>ans.back()[1]){   // when a new interval is created ?
         // when ans is empty and when the intervals[i][0] is greater than whatever is stored in ans.back()[1]

@@ -11,7 +11,7 @@ void swapGreaterToleft(vector<int>&arr1,vector<int>&arr2,int idx1,int idx2){
 }
 void solve(vector<int>&arr1,vector<int>&arr2,int n,int m){
     int len=(n+m);
-    int gap=(gap/2) +(gap%2);  // so that when n+m is odd it divide by 2 and mod of odd number is 1 so 1is added to it and hence the cieling value is taken
+    int gap=(len/2) +(len%2);  // so that when n+m is odd it divide by 2 and mod of odd number is 1 so 1is added to it and hence the cieling value is taken
     while(gap>0){
       int left=0;
       int right=left+gap;
