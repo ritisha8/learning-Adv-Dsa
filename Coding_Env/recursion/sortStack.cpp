@@ -1,16 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 void insert(int temp, stack<int>&st){
-    // THIS IS ALSO A RECURSIVE FUCNTION WE COULD MAKE IT ITERSTIVE BUT WE ARE CURRENTLY LEARNING RECURSION SO WE ILL DO IT BY RECURSION
+    // THIS IS ALSO A RECURSIVE FUCNTION WE COULD MAKE IT ITERATIVE BUT WE ARE CURRENTLY LEARNING RECURSION SO WE ILL DO IT BY RECURSION
     // bc till when this fucntion fill make inputs smaller until the stack is empty or it has 1 elemmtn , no we can pop it even in 1 ellemnt so we take an dempty stack after this pop() on empty stack will be ibnvalid
-
     if(st.size()==0 || st.top()<=temp) {
         st.push(temp);
         return;
     }
     // HYPOTHETICALLY IT WILL PLACE THE TEMP INTO ITS CORRECT POSITION SO WHEN WE DONT KNOW WHAT CAN WE DO , WE SIMPLY MAKE THE INPUT SMALL
     int val=st.top();
-    st.pop();  // re,ogved the last ellemnt and stored it in a valriable
+    st.pop();  // re,ogved the last ellemnt and stored it in a variable
     insert(temp,st);  // now we assu,me this fucntion will simply isnert the temp at its correct position  now we need tot hink till when this recursive call wil run , till which least valid input 
   // after inserting at its correct position we have to insert the popped ellemnt at its correct pos
   st.push(val);

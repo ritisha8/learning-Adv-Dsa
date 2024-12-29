@@ -26,14 +26,13 @@ void insert(int temp,vector <int>&v){
   v.push_back(val);
 
 }
-vector<int> sort(vector <int>&v){
-    if(v.size()==1) return v;  // defining base condition ,  
+void sort(vector <int>&v){
+    if(v.size()==1) return ;  // defining base condition ,  
     // making input small
     int temp=v[v.size()-1];   // by removing last ellemtnof array and storing it in temp;
     v.pop_back();  
     sort(v);  //now we will sort v.size()-1 ellemnts in ascedning order
     insert(temp,v);   // and then we will insert the popped out elelmnt using this insert fucntion which is also recursive
-    return v;
 }
 int main(){
     vector<int>v={5,1,0,2};

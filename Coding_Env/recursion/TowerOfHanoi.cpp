@@ -18,7 +18,6 @@ void toh(int n,int s,int d,int h){
     cout<<"move disc "<<n<<" from rod "<<s<<" to rod "<<d<<endl;  // induction step to compelte the fucntionn , we moved n-1 rods to helper rod and now here the nth rod we will move to dest rod
     //now we move n-1 rods from helper to dest
     toh(n-1,h,d,s);  // this step will move n-1 rods from helkper to destination rod now everythinf is done 
-    return;
 }
 int main(){
     int N;  // will input no. of discs

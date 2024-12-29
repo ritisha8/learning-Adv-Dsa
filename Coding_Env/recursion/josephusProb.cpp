@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int solve(vector<int>&v,int index,int k){
-    if(v.size()==1){   // leats valid input
+    if(v.size()==1){   // least valid input
      return v[0];
     }
     //hypothesis design that this function will return the output of one person left at the end

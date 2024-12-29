@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> solve(vector<int> v,int t){
-    //create a hashmap to store the array elemnts withtgeir indices
+    //create a hashmap to store the array elemnts with their indices
     map<int,int >mp;
     //traverse and check if the complemmnt of the current elemtn exist in map , if yes returnnthe index corresponding to it and the current elemnmt index a, otherwise just store the ellemnt in map and increment
     for(int i=0;i<v.size();i++){
